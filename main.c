@@ -214,9 +214,33 @@ int main(void)
     // }
     // printf("%d", discount
     // tháng (từ 1 đến 12) -> switch case month
-    int a;
-    scanf("%d", a);
-    sw
+    int month, year;
+    scanf("%d", &month, &year);
+
+    switch (month)
+    {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        printf("Thang %d co 31 ngay", month);
+        break;
+    case 4:
+    case 9:
+    case 6:
+    case 11:
+        printf("Thang %d co 30 ngay", month);
+        break;
+    case 2:
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) printf("Day la nam nhuan 29 ngay");
+        else printf("day la nam khong nhuan - 28");
+        break;
+    default:
+        printf("Moi nhap lai!");
+    }
     return 0;
 }
 
