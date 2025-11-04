@@ -41,35 +41,35 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/mac0s/CLionProjects/CLearn/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target CLearn
+# Object build statements for EXECUTABLE target Clearn
 
 
 #############################################
-# Order-only phony target for CLearn
+# Order-only phony target for Clearn
 
-build cmake_object_order_depends_target_CLearn: phony || .
+build cmake_object_order_depends_target_Clearn: phony || .
 
-build CMakeFiles/CLearn.dir/main.c.o: C_COMPILER__CLearn_unscanned_Debug /Users/mac0s/CLionProjects/CLearn/main.c || cmake_object_order_depends_target_CLearn
-  DEP_FILE = CMakeFiles/CLearn.dir/main.c.o.d
+build CMakeFiles/Clearn.dir/main.c.o: C_COMPILER__Clearn_unscanned_Debug /Users/mac0s/CLionProjects/CLearn/main.c || cmake_object_order_depends_target_Clearn
+  DEP_FILE = CMakeFiles/Clearn.dir/main.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/CLearn.dir
-  OBJECT_FILE_DIR = CMakeFiles/CLearn.dir
+  OBJECT_DIR = CMakeFiles/Clearn.dir
+  OBJECT_FILE_DIR = CMakeFiles/Clearn.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target CLearn
+# Link build statements for EXECUTABLE target Clearn
 
 
 #############################################
-# Link the executable CLearn
+# Link the executable Clearn
 
-build CLearn: C_EXECUTABLE_LINKER__CLearn_Debug CMakeFiles/CLearn.dir/main.c.o
+build Clearn: C_EXECUTABLE_LINKER__Clearn_Debug CMakeFiles/Clearn.dir/main.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
-  OBJECT_DIR = CMakeFiles/CLearn.dir
+  OBJECT_DIR = CMakeFiles/Clearn.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = CLearn
-  TARGET_PDB = CLearn.dbg
+  TARGET_FILE = Clearn
+  TARGET_PDB = Clearn.dbg
 
 
 #############################################
@@ -105,7 +105,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/mac0s/CLionProjects/CLearn/cmake-build-debug
 
-build all: phony CLearn
+build all: phony Clearn
 
 # =============================================================================
 # Built-in targets

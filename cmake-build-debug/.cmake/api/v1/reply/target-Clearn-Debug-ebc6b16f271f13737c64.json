@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "CLearn"
+			"path" : "Clearn"
 		}
 	],
 	"backtrace" : 1,
@@ -53,7 +53,7 @@
 			]
 		}
 	],
-	"id" : "CLearn::@6890427a1f51a3e7e1df",
+	"id" : "Clearn::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -69,8 +69,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "CLearn",
-	"nameOnDisk" : "CLearn",
+	"name" : "Clearn",
+	"nameOnDisk" : "Clearn",
 	"paths" : 
 	{
 		"build" : ".",
