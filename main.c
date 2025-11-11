@@ -1,164 +1,305 @@
 #include <stdio.h>
 
+// Function:
+// https://docs.google.com/document/d/130YMvQO2tqBXioqX3mvP7hk9l58QUsWZmrhXUXrG_h4/edit?tab=t.0
+
+// C1: ham void: chi in ra gia tri (return)
+// void printValue()
+// {
+//     for (int i = 1; i <= 5; i++)
+//     {
+//         printf("%d ", i);
+//     }
+// }
+
+// C2: cac loai ham con lai
+// Tinh tong 2 so a va b:
+// int sum(int a, int b)
+// {
+//     return a + b;
+// }
+
+
+// return type( kieu tra ve) - ten ham (parameter: tham so){
+// viet code
+// }
+
+/*
+    Exercise 0: 'Calculate' the Sum from 1 to n
+    Problem: Enter a positive integer n and calculate the sum of numbers from 1 to n.
+    Example:
+    Input: Enter a positive integer n: 10
+    Output: The sum from 1 to 10 is: 55
+int sum(int n)
+{
+    int sum = 0;
+    for (int i = 1; i <= n; i++) sum += i;
+    return sum;
+}
+ */
+
+/*
+*Exercise 1: Calculate the Sum of Consecutive Natural Squares. Problem:
+Example:
+Input: Enter a positive integer n: 4
+Output: The sum of squares from 1 to 4 is: 30 ( 1^2+2^2+3^2+4^2 = 30)
+int sum(int n)
+{
+    int sum = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        sum += i * i;
+    }
+    return sum;
+}
+Exercise 2: Calculate the Factorial
+Problem: Enter a positive integer n, calculate its factorial, and find the sum of its digits.
+Example:
+Input: Enter a positive integer n: 5
+Output: Factorial of 5 is 120 (1 * 2 * 3 * 4 * 5)
+int factorial(int n)
+{
+    int multiply = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        multiply *= i;
+    }
+    return multiply;
+}
+Exercise 3: Calculate Area and Circumference of a Circle
+Problem: Calculate the area and circumference of a circle with a given radius.
+Example:
+Input: Enter the radius of the circle: 7
+Output: Circle Area: 153.94 ( pi * R * R )
+-> Circle Circumference: 43.96 ( 2* pi * R)
+
+Exercise 4: 'Prime Number' Check
+Problem: Check if a positive integer n is a prime number.
+Example:
+Input: Enter a positive integer n: 11
+Output: 11 is a prime number: True
+Số nguyên tố là số tự nhiên lớn hơn 1, chỉ có hai ước số dương phân biệt là 1 và chính nó.
+'Điều này có nghĩa là số nguyên tố không thể chia hết cho bất kỳ số nào khác ngoài 1 và bản thân nó.'
+Ví dụ, 2, 3, 5, 7, 11 là các số nguyên tố. Các số tự nhiên lớn hơn 1 không phải là số nguyên tố được gọi là hợp số.
+int prime(int n)
+{
+    int check = 1; // true
+    // 11
+    // 2 - 10:
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0) check = 0;
+    }
+
+    return check;
+}
+Exercise 7: Check Even or Odd Number
+Problem: Check if a positive integer n is even or odd.
+Example:
+Input: Enter a positive integer n: 10
+Output: 10 is an even number
+
+int number(int n)
+{
+    int isCheck = 1; // so le
+    if (n % 2 == 0) isCheck = 0; // so chan
+    return isCheck;
+}
+ */
+
+
+// const double PI = 3.14;
+//
+// double area(int r)
+// {
+//     return PI * r * r;
+// }
+//
+// double circumference(int r)
+// {
+//     return 2 * PI * r;
+// }
+/*
+Exercise 5: Sum of Digits of a Number
+Problem: Calculate the sum of digits of a positive integer n.
+Example:
+Input: Enter a positive integer n: 456
+Output: Sum of digits of 456 is: 15 (4 + 5 + 6)
+Hint: using %10 and /= 10
+
+n = 364
+-> n /= 10 (34) or n = n /10
+sum = 0;
+while(true){
+    //
+   break;
+}
+
+n % 10 = 4 -> sum += n % 10
+n /= 10 // 36
+
+36 % 10 = 6 -> sum += n % 10 ( 6 + 4 = 10)
+n /= 10 -> 3
+
+3 % 10 = 3 -> sum += n % 10 ( 6 + 4 + 3 = 13)
+3 / 10 = 0
+...
+int number(int n)
+{
+    int sum = 0;
+    while (1)
+    {
+        sum += n % 10;
+        n /= 10;
+        if (n == 0) break;
+    }
+    return sum;
+}
+Exercise 9: Reverse a Number
+Problem: Find the reverse of a positive integer n.
+Example:
+Input: Enter a positive integer n: 1234
+Output: Reversed number is: 4321
+-> in ra 4 - 3 - 2 - 1 tren 1 dong (4321)
+Lam the nao de lay ra so 4 tu 1234-> in ra
+Lam the nao de lay ra so 3 tu 123-> in ra ...
+José mourinho
+void printReverse(int n)
+{
+    while (1)
+    {
+        printf("%d", n % 10); // 4
+        n /= 10;
+        if (n == 0) break;
+    }
+}
+Exercise 8: 'Check' 'Perfect Number' -> so hoan hao
+Problem: Check if a positive integer n is a perfect number (a number whose divisors' sum equals the number itself).
+Example:
+Input: Enter a positive integer n: 6 (1,2,3)
+Output:  6 is a perfect number
+28 (1+2+4+7+14 = 28) -> perfect number
+-> int 0, 1
+ */
+// int isPerfectNumber(int n)
+// {
+//     int isCheck = 1;
+//     int sum = 0;
+//     for (int i = 1; i < n; i++)
+//     {
+//         if (n % i == 0) sum += i;
+//     }
+//     // sum = 28
+//     if (sum == n) isCheck = 1;
+//     else isCheck = 0;
+//     return isCheck;
+// }
+
+
+/*
+*Exercise 11: Find the Greatest Common Divisor (GCD) and Largest Prime Factor
+Problem: Find the greatest common divisor (GCD) of two numbers, decompose it into prime factors, and display the largest prime factor.
+Example:
+Input: Enter the first number: 48 Enter the second number: 60
+Output: GCD of 48 and 60 is: 12 -> viet 1 ham tinh uoc chung lon nhat ( 2 so nay cung chia het cho 1 so (va so day lon nhat)
+Prime factor decomposition of 12: '2 * 2 * 3' 'Largest prime factor: 3' -> phan tach thua so nguyen to
+ */
+int gcd(int a, int b) // 48 - 60
+{
+    int GCD = 1;
+    for (int i = 1; i < a || i < b; i++)
+    {
+        if (a % i == 0 && b % i == 0) GCD = i; // 12
+    }
+    return GCD;
+}
+
+int isPrime(int n)
+{
+    int isCheck = 1;
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0) isCheck = 0;
+    }
+    return isCheck;
+}
+
+void prime(int n) // 12 = 2 * 2 * '3' (in ra con 3)
+// DK1: Phai la so nguyen to
+// DK2: phai la uoc so cua 12
+{
+    int a = 1;
+    for (int i = 1; i < n; i++)
+    {
+        if (isPrime(i) && n % i == 0) a = i;
+    }
+    printf("%d", a);
+}
+
+// Nhap vao 2 so a va b -> tinh uoc chung lon nhat chung no va tim so nguyen to lon nhat tu so day
 int main(void)
 {
-    // https://docs.google.com/document/d/1SuWcoF84BTALMB-GcT_Z5-p7oZDq1t2sQ5qRQrn9lCs/edit?tab=t.0
-    // https://meet.google.com/nmo-wmbv-kvf?ijlm=1762270567719&hs=187&adhoc=1
-    // khởi tạo 1 array gồm 5 số thập phân và in ra kết quả
-    // double arr[] = {1.2, 2.4, 3.3, 4.4, 5.5}; // khi biet truoc cac phan tu
-    // index: 0 -> 4 ( size - 1)
-    // in ra so 3.3 (2)
-    // printf("Gia tri cua phan tu mang chi so 0 la: %.2f", arr[0]);
-    // printf("Gia tri cua phan tu mang chi so 1 la: %.2f", arr[1]);
-    // printf("Gia tri cua phan tu mang chi so 2 la: %.2f", arr[2]);
-    // in ra so tu 1 -> 5 (start 1 , end 5 -> biết trước số lân lặp)
-    // for (int i = 0; i < 5; i++)
-    // {
-    //     printf("%.1f \t", arr[i]);
-    // }
-    // while: nhap tuoi -> check xem co thoa man dieu kien hay khong
-    // Khi chua biet truoc cac phan tu:
-    //
-    // const int size = 5;
-    // int newArr[size]; // - - - - -
-    // for (int i = 0; i < size; i++)
-    // {
-    //     scanf("%d", &newArr[i]); // nhap thong tin cho 5 thang -1 2 -3 5 5
-    // }
+    // printf("%d\n", gcd(48, 60));
+    int x = gcd(48, 60); // 12
+    prime(x);
+    // int n;
+    // scanf("%d", &n);
+    // if (isPerfectNumber(n)) printf("perfect number");
+    // else printf("no perfect");
 
-    // for (int i = 0; i < size; i++) printf("%d \t", newArr[i]);
+    // printReverse(1234);
+    // printf("%d", x);
+    // printf("%d", number(364));
+    // int n;
+    // scanf("%d", &n);
+    // if (number(n) == 1)
+    // {
+    //     printf("so le");
+    // }
+    // else printf("so chan");
 
-    // 100% cac bai lien quan den arrray -> vong lap for
-    // chi so i - gia tri ( newArr[i])
-    // in ra cac phan tu > 0 trong array
-    // for (int i = 0; i < size; i++)
+    // int n;
+    // scanf("%d", &n);
+    // if (prime(n) == 1)
     // {
-    //     if (newArr[i] > 0) printf("%d \n", newArr[i]);
+    //     printf("Nto");
     // }
-    // sum/tich: B1: sum/tich  = 0 -> sum += i -> print sum (ngoai vong lap for)
-    // count = 0 -> condition -> count++/ count += 1 -> print count (ngoai vong lap for)
-    // break
-    // TODO: B1:
-    // int size; // 0
-    // scanf("%d", &size); // 5
-    // int newArr1[size];
-    // for (int i = 0; i < size; i++) // input
+    // else
     // {
-    //     scanf("%d", &newArr1[i]); // |-2 4 3 4 -5|  <- -> |so 4 mang vi tri la 3|
-    // }
-    // int size2; // 0
-    // scanf("%d", &size2); // 5
-    // int newArr2[size2];
-    // int arr[size + size2]; // size = 7 - - - - - - -
-    // for (int i = 0; i < size2; i++) // input
-    // {
-    //     scanf("%d", &newArr2[i]); // |-2 4 3 4 -5|  <- -> |so 4 mang vi tri la 3|
-    // }
-    //
-    // // B1: Gan gia tri newArr1 (3,4,9,6)-> arr (0 1 2 3) (bằng vòng for)
-    // // B2: Gan gia tri newArr2 -> arr(4 5 6) (bằng vòng for)
-    // // B3: In ra arr ( 0 1 2 3 4 5 6) (bằng vòng for)
-    // for (int i = 0; i < size; i++)
-    // {
-    //     arr[i] = newArr1[i]; // [3 4 9 6 ... ... ...]
-    // }
-    // for (int i = size; i < size + size2; i++)
-    // {
-    //     arr[i] = newArr2[i - size]; // 4
-    // }
-    // for (int i = 0; i < size + size2; i++)
-    // {
-    //     printf("%d ", arr[i]);
+    //     printf("Ko Nto");
     // }
 
 
-    // for (int i = 0; i < size; i++)
-    // {
-    //     if (newArr[i] == x) count++;
-    // }
-    // printf("so lan xuat hien cua %d la: %d", x, count);
+    // int r;
+    // scanf("%d", &r);
+    // printf("%.2f \n", area(r));
+    // printf("%.2f", circumference(r));
+    // int n;
+    // scanf("%d", &n);
+    // int x = factorial(n);
+    // printf("%d", x);
 
-    // https://docs.google.com/document/d/1h7Cvt9ILkPJwZCCObQE8QFSqnejyJ2b3WzRZ8Ewoh_c/edit?tab=t.0
+    // int x = sum(4);
+    // printf("%d", x);
 
+    // int x = sum(4);
+    // printf("%d \n", x); // 10
+    // int y = sum(10);
+    // printf("%d", y); // 10
+    // Tinh tong cac so tu 1 den 8:
 
-    // int max = newArr[0]; // cầm max đi so sánh các số khác trong array
-    // int no = 0;
-    //
-    // for (int i = 0; i < size; i++)
-    // {
-    //     if (newArr[i] >= max)
-    //     {
-    //         max = newArr[i];
-    //         no = i; // 3
-    //     }
-    // }
-    //
-    // printf("phan tu lon nhat la :%d \n", max);
-    // printf("vi tri cua so lon nhat: %d", no);
-
-    // i--
-    // for (int i = size - 1; i >= 0; i--)
-    // {
-    //     if (newArr[i] > 0)
-    //     {
-    //         printf("vi tri cua phan tu duong cuoi cung o :%d", i);
-    //         break;
-    //     }
-    // }
-    // int pos = 0;
-    // for (int i = 0; i < size; i++)
-    // {
-    //     if (newArr[i] > 0) pos = i;
-    // }
-    // printf("%d", pos);
+    // Goi ham:
+    // int x = sum(3, 4);
+    // printf("%d", x);
 
 
-    // 5 1 -2 3 -4 5
-    // for (int i = 0; i < size; i++)
-    // {
-    //     if (newArr[i] < 0)
-    //     {
-    //         printf("vi tri cua phan tu am dau tien o :%d", i);
-    //         break;
-    //     }
-    // }
-
-    // for (int i = 0; i < size; i++)
-    // {
-    //     if (newArr[i] > 0)
-    //     {
-    //         count++;
-    //         sum += newArr[i];
-    //     }
-    // }
-    // printf("So cac so duong la :%d", count);
-    // printf("tong cac so duong la: %d", sum);
-
-    // for (int i = 0; i < size; i++)
-    // {
-    //     sum += newArr[i]; // logic
-    // }
-    // printf("%d ", sum);
-
-    ----
+    // printValue();
+    // printValue();
+    // printValue();
 
 
-    int size;
-    scanf("%d", &size);
-    int arr[size];
-    int x;
-    scanf("%d", &x);
-    for (int i = 0; i < size; i++)
-    {
-        scanf("%d", &arr[i]);
-    }
-
-    for (int i = 0; i < size; i++)
-    {
-        if (arr[i] != x)
-        {
-            printf("%d ", arr[i]);
-        }
-    }
     return 0;
+    // printf("x");
 }
+
+
