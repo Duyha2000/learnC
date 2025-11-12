@@ -4,6 +4,5 @@ project(CLearn C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(
-        Clearn B3.c
-        main.c
+        Clearn main.c
 )
